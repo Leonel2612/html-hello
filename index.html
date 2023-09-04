@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Instagram Photo Feed with Bootstrap</title>
@@ -9,14 +10,228 @@
                 rel="stylesheet"
                 integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
                 crossorigin="anonymous" />
+        
+        <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css"
+            rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <link href="/styles.css" rel="stylesheet"> 
+
     </head>
     
     <body>
+        <div class="container-lg">
+        <nav class="navbar navbar-light bg-light ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <i class="fa-brands fa-instagram" alt="" width="30" height="24" class="d-inline-block align-text-top"></i>
+                    <strong>Instagram</strong>
+                </a>
+
+                <div class="d-grid gap-2 d-md-flex justify-content-md-ed">
+                    <button class="btn btn-success" type="button" data-bs-toggle="modal" data-bs-target="#createpost" >Create a new post</button>
+                    <div class="modal fade" id="createpost" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="createpost"><strong>Create a new post</strong></h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="recipient-name" class="col-form-label">  <strong>Caption:</strong></label>
+                                            <input type="text" class="form-control caption-height" id="message-text" placeholder="Add the caption of your post here">
+                                        </div>
+                                        
+                                        <div class="buttons_light">
+                                            <button class="btn btn-light" type="button"> <i class="fa-solid fa-camera" style="color: #000000;"></i> </button>
+                                            <button class="btn btn-light" type="button"> <i class="fa-solid fa-location-dot" style="color: #000205;"></i> </button>
+                                        
+                                        </div>
+        
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Publish</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="gear_button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false"><i class="fa-solid fa-gear" style="color: #ffffff;"></i> 
+                            </button>
+                        <u1 class="dropdown-menu gear_menu" aria-labelledby="gear_button">
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li><a class="dropdown-item" href="#">Accesibilty</a></li>
+                            <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+                            <li class="divider"></li>
+                            <li><a class="dropdown-item last_word" href="#">Log out</a></li>
+                        </u1>
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+
+        <!-- Button Grid and square -->
+        <div class="container-fluid">
+            <div class="button_top">
+                <button id="button1" type="button" class="btn btn-outline-primary active icon-grid2"  aria-pressed="true">
+                    <i id="icon-grid"class="fas fa-th icon-grid"  ></i>
+                </button>
+                <button id="button2" type="button" class="btn btn-outline-primary" >
+                    <i id="icon-square" class="fas fa-square icon-square  " ></i>
+                </button> 
+            </div>
+        </div>
+        <div id="instagram_post" class="carousel slide">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <!-- Images -->
+                    <div class="container-fluid images-container-grid">
+
+                        <div class="row">
+                            <div class="col-lg-4 mb-2">
+                                <div class="thumbnail">
+                                    <div class="img-container-1">
+                                        <img id="random_image_1" src="https://picsum.photos/400/200?random=1" alt="image-1" class="images-size random_image">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 mb-2">
+                                <div class="thumbnail">
+                                    <div class="img-container-2">
+                                        <img id="random_image_2" src="https://picsum.photos/400/200?random=2" alt="image-2" class="images-size random_image">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 mb-2">
+                                <div class="thumbnail">
+                                    <div class="img-container-3">
+                                        <img id="random_image_3" src="https://picsum.photos/400/200?random=3" alt="image-3" class="images-size random_image">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div class="row">
+                            <div class="col-lg-4 mb-2">
+                                <div class="thumbnail">
+                                    <div class="img-container-1">
+                                        <img id="random_image_4" src="https://picsum.photos/400/200?random=4" alt="image-4" class="images-size random_image">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 mb-2">
+                                <div class="thumbnail">
+                                    <div class="img-container-2">
+                                        <img id="random_image_5" src="https://picsum.photos/400/200?random=5" alt="image-5" class="images-size random_image">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 mb-2">
+                                <div class="thumbnail">
+                                    <div class="img-container-3">
+                                        <img id="random_image_6" src="https://picsum.photos/400/200?random=6" alt="image-6" class="images-size random_image">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4 mb-2"> 
+                                <div class="thumbnail">
+                                    <div class="img-container-1">
+                                        <img id="random_image_7"src="https://picsum.photos/400/200?random=7" alt="image-7" class="images-size random_image">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 mb-2">
+                                <div class="thumbnail">
+                                    <div class="img-container-2">
+                                        <img id="random_image_8" src="https://picsum.photos/400/200?random=8" alt="image-8" class="images-size random_image">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 mb-2">
+                                <div class="thumbnail">
+                                    <div class="img-container-3">
+                                        <img id="random_image_9" src="https://picsum.photos/400/200?random=9" alt="image-9" class="images-size random_image">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="container-fluid" style="margin-top: -25px;" >
+                        <div class="card mx-auto my-5" style="width: 35rem; height: 32.5rem; ">
+                            <div class="card-header header-edit" style="background: #FFFFFF;"><h5><strong> My Third Post!</strong></h5> <p class="numbers">09/21</p> </div>
+                            <img src="https://picsum.photos/400/200?random=1" alt="image-9" class="images-size grid_size" style="margin-top: -8px;">
+                            <div class="card-body">
+                                <h9 class="card-title likes-top"><strong>204 Likes</strong></h9>
+                                <p class="card-text text_description">This is an example of a very good photo that you can post on instagram.</p>
+                                <p class="card-text last-updated"><small class="text-muted">5 Days ago</small></p>
+                              </div>
+                            </div>
+                        </div>
+
+
+                        <div class="container-fluid"style="margin-top: -25px;" >
+                            <div class="card mx-auto my-5" style="width: 35rem; height: 32.5rem; ">
+                                <div class="card-header header-edit" style="background: #FFFFFF;"><h5><strong> My Second Post!</strong></h5> <p class="numbers">08/21</p> </div>
+                                <img src="https://picsum.photos/400/200?random=5" alt="image-9" class="images-size grid_size" style="margin-top: -8px;">
+                                <div class="card-body">
+                                    <h9 class="card-title likes-top"><strong>2987 Likes</strong></h9>
+                                    <p class="card-text text_description">This is an example of a very good photo that you can post on instagram.</p>
+                                    <p class="card-text last-updated"><small class="text-muted">10 Days ago</small></p>
+                                  </div>
+                                </div>
+                            </div>
+
+                            <div class="container-fluid" style="margin-top: -25px;" >
+                                <div class="card mx-auto my-5" style="width: 35rem; height: 57.375rem; ">
+                                    <div class="card-header header-edit" style="background: #FFFFFF;"><h5><strong> My First Post!</strong></h5> <p class="numbers">07/21</p> </div>
+                                    <img src="https://picsum.photos/400/200?random=9" alt="image-9" class="images-size grid_size" style="margin-top: -8px; height: 918px;">
+                                    <div class="card-body">
+                                        <h9 class="card-title likes-top"><strong>2122 Likes</strong></h9>
+                                        <p class="card-text text_description">This is an example of a very good photo that you can post on instagram.</p>
+                                        <p class="card-text last-updated"><small class="text-muted">1 month ago</small></p>
+                                      </div>
+                                    </div>
+                                </div>
+            </div>
+
+            <a class="carousel-control-prev" href="#instagram_post" role="button" data-bs-slide="prev">
+                
+                <span class="visually-hidden">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#instagram_post" role="button" data-bs-slide="next">
+              
+                <span class="visually-hidden">Next</span>
+              </a>
+        </div>
+    </div>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script
 			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
 			integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
 			crossorigin="anonymous"
 		></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
+            crossorigin="anonymous">
+        </script>
+        
+        <script src="script.js"></script>
     </body>
 </html>
