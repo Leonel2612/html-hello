@@ -41,7 +41,7 @@
 
 
 body{
-    background-color: black;
+    background-color: white;
 }
 
 .container-lg{
@@ -68,9 +68,6 @@ body{
     margin-top: -20px;
 }
 
-/* #message-text{
-    margin-bottom: 20px;
-} */
 
 
 .caption-height{
@@ -101,11 +98,13 @@ body{
     justify-content: flex-end;
     align-items: flex-start;
     margin-left: -100px;
+
 }
 
 .gear_menu .divider{
     border-top: 1px solid #CED0D3;
 }
+
 
 .gear_menu .last_word{
     color:red
